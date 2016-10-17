@@ -1,0 +1,268 @@
+<h2 class="page-header">Wrapkit Sidebar</h2>
+
+<h3>Usage</h3>
+<pre class="language-javascript line-numbers"><code>var mySidebar = new WrapkitSidebar( '#mySidebar', options );</code></pre>
+
+<h3>Options</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>align</td>
+        <td>string</td>
+        <td><span class="code">left</span></td>
+        <td>set the Sidebar position to left/right (not including direction).</td>
+      </tr>
+      <tr>
+        <td>caret</td>
+        <td>object</td>
+        <td><pre>{
+  collapse: "fa-angle-right",
+  expand: "fa-angle-down",
+  prefix: "fa"
+}</pre></td>
+        <td>the icon open/collapse indicator on sidebar menu. You can use all of available icons.</td>
+      </tr>
+      <tr>
+        <td>context</td>
+        <td>string</td>
+        <td><span class="code">teal</span></td>
+        <td>Contextual color of Sidebar menu.</td>
+      </tr>
+      <tr>
+        <td>fixed</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Sidebar to fixed.</td>
+      </tr>
+      <tr>
+        <td>loader</td>
+        <td>string</td>
+        <td><span class="code">fa-spinner</span></td>
+        <td>loader indicator, useful for server side actions (save, edit, delete, load, etc) like ajax or something else.</td>
+      </tr>
+      <tr>
+        <td>maxResize</td>
+        <td>int</td>
+        <td><span class="code">360</span></td>
+        <td>will give a value for the maximal Sidebar size that can be done with <code>resizable</code> (unit in px).</td>
+      </tr>
+      <tr>
+        <td>minResize</td>
+        <td>int</td>
+        <td><span class="code">220</span></td>
+        <td>will give a value for the minimum Sidebar size that can be done with <code>resizable</code> (unit in px).</td>
+      </tr>
+      <tr>
+        <td>mode</td>
+        <td>string</td>
+        <td><span class="code">vertical</span></td>
+        <td>rendering sidebar as a vertical or horizontal line.</td>
+      </tr>
+      <tr>
+        <td>resizable</td>
+        <td>boolean</td>
+        <td><span class="code">true</span></td>
+        <td>allow the users to resize the sidebar with mouse/touch event.</td>
+      </tr>
+      <tr>
+        <td>rtlMode</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Sidebar direction to rtl/ltr.</td>
+      </tr>
+      <tr>
+        <td>size</td>
+        <td>string</td>
+        <td><span class="code">lg</span></td>
+        <td>variant of Sidebar size (lg/sm).</td>
+      </tr>
+      <tr>
+        <td>rtlMode</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Sidebar direction to rtl/ltr.</td>
+      </tr>
+      <tr>
+        <td>skin</td>
+        <td>string</td>
+        <td><span class="code">dark</span></td>
+        <td>
+          <p>set the Sidebar skin. Available skins:</p>
+          <p><code>default</code>, <code>dark</code>, <code>light</code>, <code>red</code>, <code>orange</code>, <code>yellow</code>, <code>green</code>, <code>teal</code>, <code>cyan</code>, <code>blue</code>, <code>violet</code>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td><span class="code">tabs</span></td>
+        <td>variant of sidebar menu style (pills/tabs).</td>
+      </tr>
+      <tr>
+        <td>visible</td>
+        <td>boolean</td>
+        <td><span class="code">true</span></td>
+        <td>hide/show the Sidebar.</td>
+      </tr>
+    </tbody>
+  </table><!-- /.table -->
+</div><!-- /.table-responsive -->
+<h4>setter</h4>
+<pre class="language-javascript line-numbers"><code>var opts = {
+  align: "left",
+  caret: {
+    collapse: "fa-angle-right",
+    expand: "fa-angle-down",
+    prefix: "fa"
+  },
+  context: "teal",
+  fixed: false,
+  loader: "fa-spinner",
+  maxResize: 360,
+  minResize: 220,
+  mode: "vertical",
+  resizable: true,
+  rtlMode: false,
+  size: "lg",
+  skin: "dark",
+  variant: "tabs",
+  visible: true
+};
+mySidebar.option( opts );</code></pre>
+<h4>getter</h4>
+<pre class="language-javascript"><code>var options = mySidebar.options;</code></pre>
+<h5>get individually</h5>
+<pre class="language-javascript"><code>var isShow = mySidebar.options.visibility;</code></pre>
+
+<h3>Methods</h3>
+<h4><span class="code">setMode()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // use horizontal mode
+  mySidebar.setMode("horizontal");
+});</code></pre>
+
+<h4><span class="code">setSkin()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the sidebar skin
+  mySidebar.setSkin("light");
+});</code></pre>
+
+<h4><span class="code">setContext()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the sidebar context
+  mySidebar.setContext("red");
+});</code></pre>
+
+<h4><span class="code">setVariant()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the sidebar variant
+  mySidebar.setVariant("pills");
+});</code></pre>
+
+<h4><span class="code">fixed()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the sidebar to fixed position
+  mySidebar.fixed(true);
+});</code></pre>
+
+<h4><span class="code">size()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // resize the sidebar to small size
+  mySidebar.size("sm");
+});</code></pre>
+
+<h4><span class="code">hide()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // hidden the sidebar
+  mySidebar.hide();
+});</code></pre>
+
+<h4><span class="code">show()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // show the sidebar
+  mySidebar.show();
+});</code></pre>
+
+<h4><span class="code">showLoader()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // show event loader
+  var index = mySidebar.elem.querySelector('.nav-item:eq(3)');
+  mySidebar.showLoader( index, 'fa-spinner' );
+});</code></pre>
+
+<h4><span class="code">hideLoader()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // show event loader
+  var index = mySidebar.elem.querySelector('.nav-item:eq(3)');
+  mySidebar.hideLoader( index );
+});</code></pre>
+
+<h4><span class="code">align()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the sidebar align
+  mySidebar.align("right");
+});</code></pre>
+
+<h4><span class="code">rtl()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the sidebar direction
+  mySidebar.rtl(true);
+});</code></pre>
+
+<h4><span class="code">resizable()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // turn on/off mouse resizable
+  mySidebar.resizable(false);
+});</code></pre>
+
+
+<h3>Events</h3>
+<h4><span class="code">init</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "init", function( mySidebar ) { });</code></pre>
+<h4><span class="code">align</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "align", function( mySidebar, align ) { });</code></pre>
+<h4><span class="code">fixed</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "fixed", function( mySidebar, fixed ) { });</code></pre>
+<h4><span class="code">hide</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "hide", function( mySidebar, visibility ) { });</code></pre>
+<h4><span class="code">hideLoader</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "hideLoader", function( mySidebar, loader, target ) { });</code></pre>
+<h4><span class="code">rtl</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "rtl", function( mySidebar, rtl ) { });</code></pre>
+<h4><span class="code">resizable</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "resizable", function( mySidebar, resizable ) { });</code></pre>
+<h4><span class="code">setContext</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "setContext", function( mySidebar, oldContext, currentContext ) { });</code></pre>
+<h4><span class="code">setMode</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "setMode", function( mySidebar, mode ) { });</code></pre>
+<h4><span class="code">setSkin</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "setSkin", function( mySidebar, oldSkin, currentSkin ) { });</code></pre>
+<h4><span class="code">setVariant</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "setVariant", function( mySidebar, oldVariant, currentVariant ) { });</code></pre>
+<h4><span class="code">show</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "show", function( mySidebar, visivility ) { });</code></pre>
+<h4><span class="code">showLoader</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "showLoader", function( mySidebar, loader, target ) { });</code></pre>
+<h4><span class="code">size</span></h4>
+<pre class="language-javascript"><code>mySidebar.on( "size", function( mySidebar, size ) { });</code></pre>

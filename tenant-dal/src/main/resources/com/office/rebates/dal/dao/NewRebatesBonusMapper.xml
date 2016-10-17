@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.office.rebates.dal.dao.NewRebatesBonusMapper">
+  <resultMap id="BaseResultMap" type="com.office.rebates.model.BonusModel">
+    <result column="customer_mobile" jdbcType="VARCHAR" property="customerMobile" />
+    <result column="customer_name" jdbcType="VARCHAR" property="customerName" />
+    <result column="rebates_amount" jdbcType="DECIMAL" property="rebatesAmount" />
+    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+
+  <select id="getRecentBonusList" resultMap="BaseResultMap">
+    SELECT customer_mobile, customer_name,rebates_amount, last_update_time 
+    from 
+    (
+    (SELECT customer_mobile, customer_name,rebates_amount/100 as rebates_amount,DATE_FORMAT(b.last_update_time,'%Y-%m-%d %T') as last_update_time
+    FROM  rebates_bonus b,rebates_order o
+    where b.order_id=o.order_id
+    and b.status=4
+    order by b.bonus_id desc
+    limit 10)
+    union 
+    (SELECT customer_mobile, customer_name,rebates_amount,DATE_FORMAT(last_update_time,'%Y-%m-%d') as last_update_time
+    FROM  rebates_bonus_mock
+    order by bonus_mock_id desc
+    limit 10)
+    ) t
+	order by t.last_update_time desc
+  </select>
+
+</mapper>

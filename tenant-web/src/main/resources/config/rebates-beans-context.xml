@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+             xsi:schemaLocation="http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	    http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd
+        http://mybatis.org/schema/mybatis-spring 
+        http://mybatis.org/schema/mybatis-spring.xsd">
+
+
+	<util:properties id="apiConfig" location="classpath:config/config.properties"></util:properties>
+	
+	<!-- 数据库配置  -->
+	<!-- ======================================================================== -->
+	<!--  data source -->
+	<!-- ======================================================================== -->
+	<bean id="rdsRebatesDataSource" class="org.apache.commons.dbcp.BasicDataSource" lazy-init="true">
+		<property name="url" value="#{apiConfig['rebates.ds.rds.url']}" />
+		<property name="driverClassName" value="#{apiConfig['rebates.ds.rds.driver']}" />
+		<property name="username" value="#{apiConfig['rebates.ds.rds.username']}" />
+		<property name="password" value="#{apiConfig['rebates.ds.rds.password']}" />
+		<property name="validationQuery" value="SELECT  1" />
+		<property name="testOnBorrow" value="true" />
+		<property name="initialSize" value="#{apiConfig['rebates.ds.rds.initial.size']}" />
+		<property name="maxActive" value="#{apiConfig['rebates.ds.rds.max.active']}" />
+		<property name="minIdle" value="#{apiConfig['rebates.ds.rds.min.idle']}" />
+		<property name="maxIdle" value="#{apiConfig['rebates.ds.rds.max.idle']}" />
+	</bean>
+	
+	<!-- ======================================================================== -->
+	<!-- 数据库事务配置 -->
+	<!-- ======================================================================== -->
+	<bean id="rebatesTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="#{apiConfig['rebates.datasource.type']}" />
+	</bean>
+
+	<bean id="rebatesTransactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="rebatesTransactionManager" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="rebatesTransactionManager" />
+	
+	<!-- ======================================================================== -->
+	<!-- mybatis -->
+	<!-- ======================================================================== -->
+	<bean id="rebatesSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="#{apiConfig['rebates.datasource.type']}"/>
+        <property name="configLocation" value="classpath:config/db-mybatis-config.xml" />
+    </bean>
+
+    <bean id="rebatesSqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="rebatesSqlSessionFactory"/>
+    </bean>
+    
+    <mybatis:scan base-package="com.office.rebates.dal.dao" factory-ref="rebatesSqlSessionFactory"
+		template-ref="rebatesSqlSessionTemplate" />
+
+	<!--upload-->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		 <!-- 设置上传文件的最大尺寸为5MB (104857600) -->
+		<property name="maxUploadSize">
+			<value>104857600</value>
+		</property>
+	</bean>	
+	
+	
+	<!-- 设置调度 -->
+	<bean id="rebatesScheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="soho3qOrderStatusCheckTrigger" />
+            </list>
+        </property>
+    </bean> 
+    
+    	<!-- 业务对象-->
+	 <bean id="soho3qOrderStatusCheckTask" class="com.office.rebates.service.quartz.Soho3qOrderStatusCheckTask">
+    </bean>
+    
+	<!-- 调度业务  -->
+	 <bean id="soho3qOrderStatusCheckJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="soho3qOrderStatusCheckTask" />
+        <property name="targetMethod" value="doWork" />
+        <property name="concurrent" value="false" />
+    </bean>
+
+	
+	 <!-- 每5分钟补偿一次订单的状态 -->
+	 <!--  <value>0 */3 * * * ?</value> <value>0 0 2 * * ?</value>-->
+	<bean id="soho3qOrderStatusCheckTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="soho3qOrderStatusCheckJob" />
+		<property name="cronExpression">			
+			<value>0 26 */2 * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- ======================================================================== -->
+	<!-- soho3q api access -->
+	<!-- ======================================================================== -->
+	<bean id="soho3qCodeApi" class="com.office.rebates.dal.rest.Soho3qCodeApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_CODE_URL']}" />
+		<property name="timeOut" value="#{apiConfig['COMMON_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qTokenApi" class="com.office.rebates.dal.rest.Soho3qTokenApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_TOKEN_URL']}" />
+		<property name="timeOut" value="#{apiConfig['COMMON_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qCheckOrderApi" class="com.office.rebates.dal.rest.Soho3qCheckOrderApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_CHECK_ORDER_URL']}" />
+		<property name="timeOut" value="#{apiConfig['LONG_TIMEOUT']}" />
+	</bean>
+	<bean id="soho3qMemberApi" class="com.office.rebates.dal.rest.Soho3qMemberApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_IS_MEMBER_URL']}" />
+		<property name="timeOut" value="#{apiConfig['LONG_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qCreateOrderApi" class="com.office.rebates.dal.rest.Soho3qCreateOrderApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_CREATE_ORDER_URL']}" />
+		<property name="timeOut" value="#{apiConfig['LONG_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qGetProjectListApi" class="com.office.rebates.dal.rest.Soho3qGetProjectListApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_GET_PROJECT_LIST_URL']}" />
+		<property name="timeOut" value="#{apiConfig['COMMON_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qGetProductListApi" class="com.office.rebates.dal.rest.Soho3qGetProductListApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_GET_PRODUCT_LIST_URL']}" />
+		<property name="timeOut" value="#{apiConfig['COMMON_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qUserLoginApi" class="com.office.rebates.dal.rest.Soho3qUserLoginApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_USER_LOGIN_URL']}" />
+		<property name="timeOut" value="#{apiConfig['COMMON_TIMEOUT']}" />
+	</bean>
+	
+	<!--cache client,expire after 20 hours-->
+	<bean id="simpleRedisClient" class="com.office.rebates.dal.cache.SimpleRedisCacheClient" scope="prototype">
+		<constructor-arg>
+			<bean class="com.office.rebates.dal.cache.CacheConfig">
+				<property name="host" value="#{apiConfig['redis.host']}" />
+				<property name="prefix" value="UserToken" />
+				<property name="expireTime" value="72000" />
+			</bean>
+		</constructor-arg>
+	</bean>	
+	
+	<bean id="soho3qCreateCouponOrderApi" class="com.office.rebates.dal.rest.Soho3qCreateCouponOrderApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_CREATE_COUPON_ORDER_URL']}" />
+		<property name="timeOut" value="#{apiConfig['LONG_TIMEOUT']}" />
+	</bean>
+	
+	<bean id="soho3qGetCouponListApi" class="com.office.rebates.dal.rest.Soho3qGetCouponListApi">
+		<property name="url" value="#{apiConfig['SOHO3Q_GET_COUPON_LIST_URL']}" />
+		<property name="timeOut" value="#{apiConfig['LONG_TIMEOUT']}" />
+	</bean>
+
+</beans:beans>

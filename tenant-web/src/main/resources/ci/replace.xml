@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Replace>
+	<File file="\WEB-INF\classes\config\web.properties">
+		<Item key="#[appversion]">#{Date}</Item>
+		<Item key="#[debug]">false</Item>
+	</File>
+</Replace>

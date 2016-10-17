@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes">
+
+  <title>Get Started - Wrapkit Documentations</title>
+
+
+  <!-- favicon.ico and apple-touch-icon.png -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/favicons/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="../../images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,600,300" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="../styles/bootstrap.css">
+
+  <link rel="stylesheet" href="../styles/dependencies.css">
+
+  <link rel="stylesheet" href="../styles/wrapkit.css">
+
+  <link rel="stylesheet" href="styles/docs.css">
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+  <main class="wrapkit-wrapper" id="wrapper">
+    <!-- ============================================
+    HEADER SECTION
+    =============================================== -->
+    <!-- navigation -->
+    <nav class="header navbar visible-xs">
+      <div class="container-fluid">
+        <!-- use .pull-*, couse we need this float on any screen size -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-sidebar="toggleVisible" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><strong>Wrapkit <sup class="text-primary">Docs 1.2</sup></strong></a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav><!-- /navigation -->
+
+
+    <!-- ============================================
+    SIDEBAR SECTION
+    =============================================== -->
+    <aside class="sidebar" role="complementary">
+      <div class="sidebar-block hidden-xs">
+        <h1 class="brand-desc">Wrapkit <sup><small class="text-primary">Docs 1.2</small></sup></h1>
+      </div><!-- /.sidebar-block -->
+
+      <!-- sidebar nav -->
+      <div class="nav-wrapper mt-1x">
+        <ul class="nav nav-stacked" role="navigation">
+          <li class="nav-item" role="presentation">
+            <a href="index.html"><span class="nav-text">Get Started</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item" role="presentation">
+            <a href="styles.html"><span class="nav-text">Styles</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item" role="presentation">
+            <a href="ecosystem.html"><span class="nav-text">Ecosystem</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item active" role="presentation">
+            <a href="layout-templates.html"><span class="nav-text">Layout Templates</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item" role="presentation">
+            <a href="third-party.html"><span class="nav-text">Third Party</span></a>
+          </li><!-- /.nav-item -->
+        </ul><!-- /.nav -->
+      </div><!-- /.nav-wrapper -->
+    </aside><!-- /.SIDEBAR -->
+
+
+    <!-- ============================================
+    MAIN CONTENT SECTION
+    =============================================== -->
+    <section class="content-wrapper" role="main">
+      <div class="content">
+
+      <div class="themes-box">
+        <a href="#" id="light-theme" class="sidebar-block-item bg-light" title="Light" aria-label="Light"></a>
+        <a href="#" id="dark-theme" class="sidebar-block-item bg-dark" title="Dark" aria-label="Dark"></a>
+      </div>
+
+        <div class="content-body">
+          <h2 class="page-header">Overview</h2>
+          <p>We just showing basic template for each part. Please refer to <a href="http://wrapui.com/items/preview/wrapkit/1.1/layout.html" target="_blank">Layouts Demo</a> for more details.</p>
+
+          <h3>Header Template</h3>
+          <pre class="language-markup line-numbers"><code>&lt;!-- navigation --&gt;
+&lt;nav class=&quot;header navbar&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;!-- use .pull-*, couse we need this float on any screen size --&gt;
+    &lt;div class=&quot;pull-left&quot;&gt;
+      &lt;a class=&quot;navbar-brand&quot; href=&quot;index.html&quot; role=&quot;logo&quot; aria-label=&quot;Logo&quot;&gt;
+        &lt;img class=&quot;logo&quot; src=&quot;images/logo/brand-text-dark.png&quot; alt=&quot;Brand&quot;&gt;
+      &lt;/a&gt;
+      &lt;button data-sidebar=&quot;toggleVisible&quot; class=&quot;btn btn-icon navbar-btn&quot;&gt;
+        &lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;
+        &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- use .pull-*, couse we need this float on any screen size --&gt;
+    &lt;div class=&quot;pull-right&quot; role=&quot;navigation&quot;&gt;
+      &lt;a aria-label=&quot;Search&quot; id=&quot;brandSearchNav&quot; class=&quot;btn btn-icon navbar-btn&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a aria-label=&quot;Signout&quot; class=&quot;btn btn-icon navbar-btn&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-sign-out&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /navigation --&gt;
+
+    &lt;div class=&quot;brand-search&quot; id=&quot;brandSearchFrm&quot;&gt;
+      &lt;form action=&quot;#&quot; role=&quot;search&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;search-close&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;input class=&quot;search-field&quot; placeholder=&quot;Search for everything you want...&quot; tabindex=&quot;-1&quot;&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;&lt;!-- /.brand-search --&gt;
+  &lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;&lt;!-- /navigation --&gt;</code></pre>
+
+
+          <h3>Sidebar Template</h3>
+          <pre class="language-markup line-numbers"><code>&lt;!-- ============================================
+SIDEBAR SECTION
+=============================================== --&gt;
+&lt;aside class=&quot;sidebar&quot; role=&quot;complementary&quot;&gt;
+  &lt;!-- profile --&gt;
+  &lt;div class=&quot;sidebar-block&quot;&gt;
+    &lt;div class=&quot;media&quot;&gt;
+      &lt;div class=&quot;media-left&quot;&gt;
+        &lt;a href=&quot;page-profile.html&quot;&gt;
+          &lt;span class=&quot;status dotted dotted-success&quot; data-toggle=&quot;tooltip&quot; data-container=&quot;body&quot; title=&quot;&quot; data-original-title=&quot;available&quot;&gt;&lt;/span&gt;
+          &lt;img class=&quot;media-object img-circle&quot; src=&quot;images/dummy/uifaces14.jpg&quot; alt=&quot;photo profile&quot;&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;media-body&quot;&gt;
+        &lt;h4 class=&quot;media-heading&quot;&gt;Emma Greene&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;text-muted fa fa-angle-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;
+        &lt;p class=&quot;text-muted&quot;&gt;
+          &lt;small&gt;Graphic Designer&lt;/small&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- /.sidebar-block --&gt;
+
+  &lt;!-- /navigation --&gt;
+  &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;ul class=&quot;nav nav-stacked&quot; role=&quot;navigation&quot;&gt;
+      &lt;li class=&quot;nav-item active&quot; role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;layout.html&quot;&gt;
+          &lt;span class=&quot;nav-icon&quot;&gt;&lt;i class=&quot;fa fa-object-group&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;span class=&quot;nav-text&quot;&gt;Layout&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;&lt;!-- /.SIDEBAR --&gt;</code></pre>
+
+
+          <h3>Content Template</h3>
+          <pre class="language-markup line-numbers"><code>&lt;!-- ============================================
+MAIN CONTENT SECTION
+=============================================== --&gt;
+&lt;section class=&quot;content-wrapper&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;content-bar&quot;&gt;
+      &lt;div class=&quot;pull-right&quot; role=&quot;group&quot;&gt;
+        &lt;a data-toggle=&quot;modal&quot; href=&quot;#&quot; data-scripts=&quot;_includes/setups.js&quot; data-target=&quot;#templateSetup&quot; title=&quot;Template Setups&quot; aria-label=&quot;template setups&quot; class=&quot;btn btn-nofill btn-sm btn-default&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;icon-settings fa-lg text-muted&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;ul class=&quot;breadcrumb breadcrumb-angle&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; aria-label=&quot;home&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;layout-html&quot;&gt;Root&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;Active&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!-- /.content-bar --&gt;
+
+
+    &lt;div class=&quot;content-body&quot;&gt;&lt;/div&gt;&lt;!-- /.content-body --&gt;
+
+
+    &lt;!-- Template Setups --&gt;
+    &lt;div class=&quot;modal fade&quot; id=&quot;templateSetup&quot;&gt;
+      &lt;div class=&quot;modal-dialog&quot;&gt;
+        &lt;!-- modal-content --&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+    &lt;/div&gt;&lt;!-- /.templateSetup --&gt;
+
+  &lt;/div&gt;&lt;!-- /.content --&gt;
+&lt;/section&gt;&lt;!-- /MAIN --&gt;</code></pre>
+
+
+
+          <h3>Footer Template</h3>
+          <pre class="language-markup line-numbers"><code>&lt;!-- ============================================
+FOOTER SECTION
+=============================================== --&gt;
+&lt;footer class=&quot;footer-wrapper&quot; role=&quot;contentinfo&quot;&gt;
+  &lt;div class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;pull-right text-muted&quot;&gt;&lt;small&gt;Currently v1.2&lt;/small&gt;&lt;/div&gt;
+    &lt;div&gt;Wrapkit Template  &amp;copy; 2015&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;&lt;!-- /.FOOTER --&gt;</code></pre>
+
+        </div><!-- /.content-body -->
+
+      </div><!-- /.content -->
+    </section><!-- /MAIN -->
+
+  </main>
+  <!-- /#MAIN -->
+
+
+  <!-- bower:js -->
+  <!-- VENDORS : jQuery & Bootstrap -->
+  <script src="../scripts/vendor.js"></script>
+  <!-- END VENDORS -->
+
+  <!-- DEPENDENCIES : Required plugins -->
+  <script src="../scripts/dependencies.js"></script>
+  <!-- END DEPENDENCIES -->
+  <!-- endbower -->
+
+  <!-- WRAPKIT -->
+  <script src="../scripts/wrapkit.js"></script>
+  <!-- END WRAPKIT -->
+
+  <!-- PLUGIN SETUPS: vendors & dependencies setups -->
+  <script src="../scripts/plugin-setups.js"></script>
+  <!-- END PLUGIN SETUPS -->
+
+  <!-- DOCS SETUPS -->
+  <script src="scripts/prism.js"></script>
+  <script src="scripts/setups.js"></script>
+  <!-- end DOCS SETUPS -->
+
+
+  <!-- Google Analytics: change UA-48454066-1 to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-48454066-1');ga('send','pageview');
+  </script>
+</body>
+
+</html>

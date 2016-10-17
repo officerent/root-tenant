@@ -1,0 +1,50 @@
+<h2 class="page-header">Wrapkit Content</h2>
+
+<h3>Usage</h3>
+<pre class="language-javascript line-numbers"><code>var myContent = new WrapkitContent( '#myContent', options );</code></pre>
+
+<h3>Options</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>rtlMode</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Content direction to rtl/ltr.</td>
+      </tr>
+    </tbody>
+  </table><!-- /.table -->
+</div><!-- /.table-responsive -->
+<h4>setter</h4>
+<pre class="language-javascript line-numbers"><code>var opts = {
+  rtlMode: false
+};
+myContent.option( opts );</code></pre>
+<h4>getter</h4>
+<pre class="language-javascript"><code>var options = myContent.options;</code></pre>
+<h5>get individually</h5>
+<pre class="language-javascript"><code>var isRtl = myContent.options.rtlMode;</code></pre>
+
+<h3>Methods</h3>
+<h4><span class="code">rtl()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set rtl direction
+  myLayout.rtl(true);
+});</code></pre>
+
+
+<h3>Events</h3>
+<h4><span class="code">init</span></h4>
+<pre class="language-javascript"><code>myContent.on( "init", function( myContent ) { });</code></pre>
+<h4><span class="code">rtl</span></h4>
+<pre class="language-javascript"><code>myContent.on( "rtl", function( myContent ) { });</code></pre>

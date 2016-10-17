@@ -1,0 +1,81 @@
+<h2 class="page-header">Wrapkit Layout</h2>
+<p>wrapkitLayout work on <code>.wrapkit-wrapper</code> lets you set the basic layout of the application.</p>
+
+<h3>Usage</h3>
+<pre class="language-javascript line-numbers"><code>var myLayout = new WrapkitLayout( '#myLayout', options );</code></pre>
+
+<h3>Options</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>box</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Layout to fluid/box.</td>
+      </tr>
+      <tr>
+        <td>fullscreen</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Layout to use fullscreen or not.</td>
+      </tr>
+    </tbody>
+  </table><!-- /.table -->
+</div><!-- /.table-responsive -->
+<h4>setter</h4>
+<pre class="language-javascript line-numbers"><code>var opts = {
+  box: true,
+  fullscreen: false
+};
+myLayout.option( opts );</code></pre>
+<h4>getter</h4>
+<pre class="language-javascript"><code>var options = myLayout.options;</code></pre>
+<h5>get individually</h5>
+<pre class="language-javascript"><code>var isLayoutBox = myLayout.options.box;</code></pre>
+
+<h3>Methods</h3>
+<h4><span class="code">setFluid()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set to fluid
+  myLayout.setFluid();
+});</code></pre>
+
+<h4><span class="code">setBox()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set to box
+  myLayout.setBox();
+});</code></pre>
+
+<h4><span class="code">fullscreen()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // make fullscreen
+  myLayout.fullscreen();
+});</code></pre>
+
+<h4><span class="code">exitFullscreen()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // exit fullscreen
+  myLayout.exitFullscreen();
+});</code></pre>
+
+
+<h3>Events</h3>
+<h4><span class="code">init</span></h4>
+<pre class="language-javascript"><code>myLayout.on( "init", function( myLayout ) { });</code></pre>
+<h4><span class="code">layoutChanged</span></h4>
+<pre class="language-javascript"><code>myLayout.on( "layoutChanged", function( myLayout, layout ) { });</code></pre>
+<h4><span class="code">fullscreen</span></h4>
+<pre class="language-javascript"><code>myLayout.on( "fullscreen", function( myLayout, fs ) { });</code></pre>

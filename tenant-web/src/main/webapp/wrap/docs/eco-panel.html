@@ -1,0 +1,134 @@
+<h2 class="page-header">Wrapkit Panel</h2>
+
+<h3>Usage</h3>
+<pre class="language-javascript line-numbers"><code>var myPanel = new WrapkitPanel( '#myPanel', options );</code></pre>
+
+<h3>Options</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>collapse</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>toggle collapse a Panel.</td>
+      </tr>
+      <tr>
+        <td>expand</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>toggle expand a Panel. It's make a Panel to fit document sizes.</td>
+      </tr>
+      <tr>
+        <td>loaderTemplate</td>
+        <td>string</td>
+        <td><span class="code">&lt;i class='fa fa-spin fa-spinner'&gt;&lt;/i&gt;</span></td>
+        <td>the loader indicator (icon) that use when panel loader is show.</td>
+      </tr>
+      <tr>
+        <td>loaderColor</td>
+        <td>string</td>
+        <td><span class="code">blue</span></td>
+        <td>
+          <p>color that applied to the loaderTemplate. Available colors:</p>
+          <p><code>dark</code>, <code>light</code>, <code>red</code>, <code>orange</code>, <code>yellow</code>, <code>green</code>, <code>teal</code>, <code>cyan</code>, <code>blue</code>, <code>violet</code>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>context</td>
+        <td>string</td>
+        <td><span class="code">default</span></td>
+        <td>contextual color of panel.</td>
+      </tr>
+      <tr>
+        <td>fillColor</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>activated Panel fill color.</td>
+      </tr>
+    </tbody>
+  </table><!-- /.table -->
+</div><!-- /.table-responsive -->
+<h4>setter</h4>
+<pre class="language-javascript line-numbers"><code>var opts = {
+  collapse: false,
+  expand: false,
+  loaderTemplate: "&lt;i class='fa fa-spin fa-spinner'&gt;&lt;/i&gt;",
+  context: 'default',
+  loaderColor: 'blue',
+  fillColor: false
+};
+myPanel.option( opts );</code></pre>
+<h4>getter</h4>
+<pre class="language-javascript"><code>var options = myPanel.options;</code></pre>
+<h5>get individually</h5>
+<pre class="language-javascript"><code>var isExpand = myPanel.options.expand;</code></pre>
+
+<h3>Methods</h3>
+<h4><span class="code">setContext()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set contextual color
+  myPanel.setContext('teal');
+});</code></pre>
+
+<h4><span class="code">setFill()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // use fill color
+  myPanel.setFill(true);
+});</code></pre>
+
+<h4><span class="code">hide()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // hidden panel
+  myPanel.hide();
+});</code></pre>
+
+<h4><span class="code">collapse()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // toggle collapse a panel
+  myPanel.collapse(true);
+});</code></pre>
+
+<h4><span class="code">expand()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // toggle expand a panel
+  myPanel.expand(true);
+});</code></pre>
+
+<h4><span class="code">showLoader()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // show loader indicator
+  myPanel.showLoader();
+});</code></pre>
+
+
+
+<h3>Events</h3>
+<h4><span class="code">init</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "init", function( myPanel ) { });</code></pre>
+<h4><span class="code">setContext</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "setContext", function( myPanel, context ) { });</code></pre>
+<h4><span class="code">toggleFill</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "toggleFill", function( myPanel, args ) { });</code></pre>
+<h4><span class="code">hide</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "hide", function( myPanel ) { });</code></pre>
+<h4><span class="code">collapse</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "collapse", function( myPanel, collapse ) { });</code></pre>
+<h4><span class="code">expand</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "expand", function( myPanel, expand ) { });</code></pre>
+<h4><span class="code">showLoader</span></h4>
+<pre class="language-javascript"><code>myPanel.on( "showLoader", function( myPanel ) { });</code></pre>

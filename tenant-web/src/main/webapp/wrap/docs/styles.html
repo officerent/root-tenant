@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes">
+
+  <title>Get Started - Wrapkit Documentations</title>
+
+
+  <!-- favicon.ico and apple-touch-icon.png -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/favicons/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="../../images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,600,300" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="../styles/bootstrap.css">
+
+  <link rel="stylesheet" href="../styles/dependencies.css">
+
+  <link rel="stylesheet" href="../styles/wrapkit.css">
+
+  <link rel="stylesheet" href="styles/docs.css">
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+  <main class="wrapkit-wrapper" id="wrapper">
+    <!-- ============================================
+    HEADER SECTION
+    =============================================== -->
+    <!-- navigation -->
+    <nav class="header navbar visible-xs">
+      <div class="container-fluid">
+        <!-- use .pull-*, couse we need this float on any screen size -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-sidebar="toggleVisible" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><strong>Wrapkit <sup class="text-primary">Docs 1.2</sup></strong></a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav><!-- /navigation -->
+
+
+    <!-- ============================================
+    SIDEBAR SECTION
+    =============================================== -->
+    <aside class="sidebar" role="complementary">
+      <div class="sidebar-block hidden-xs">
+        <h1 class="brand-desc">Wrapkit <sup><small class="text-primary">Docs 1.2</small></sup></h1>
+      </div><!-- /.sidebar-block -->
+
+      <!-- sidebar nav -->
+      <div class="nav-wrapper mt-1x">
+        <ul class="nav nav-stacked" role="navigation">
+          <li class="nav-item" role="presentation">
+            <a href="index.html"><span class="nav-text">Get Started</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item active" role="presentation">
+            <a href="styles.html"><span class="nav-text">Styles</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item" role="presentation">
+            <a href="ecosystem.html"><span class="nav-text">Ecosystem</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item" role="presentation">
+            <a href="layout-templates.html"><span class="nav-text">Layout Templates</span></a>
+          </li><!-- /.nav-item -->
+          <li class="nav-item" role="presentation">
+            <a href="third-party.html"><span class="nav-text">Third Party</span></a>
+          </li><!-- /.nav-item -->
+        </ul><!-- /.nav -->
+      </div><!-- /.nav-wrapper -->
+    </aside><!-- /.SIDEBAR -->
+
+
+    <!-- ============================================
+    MAIN CONTENT SECTION
+    =============================================== -->
+    <section class="content-wrapper" role="main">
+      <div class="content">
+
+      <div class="themes-box">
+        <a href="#" id="light-theme" class="sidebar-block-item bg-light" title="Light" aria-label="Light"></a>
+        <a href="#" id="dark-theme" class="sidebar-block-item bg-dark" title="Dark" aria-label="Dark"></a>
+      </div>
+
+        <div class="content-body">
+          <h1 class="page-header">Intro</h1>
+          <p>This is an easy way to get started with wrapkit. All css files that you get the is the result of compiling of SCSS file. We have divided it into small pieces which are easy to customized. It's a perfect way to customize the template.</p>
+
+          <h1 class="page-header">What you get?</h1>
+          <p>All CSS files is a minified, but we include SCSS files that compose them.</p>
+          <h2>bootstrap.css</h2>
+          <p>The default and custom Bootstrap CSS. They are the result compile of bootstrap.scss and bootstrap-custom.scss. You will find that they are really easy to read.</p>
+
+          <h2>dependencies.css</h2>
+          <p>The stylesheet of required dependencies (including icons). The SCSS files:</p>
+          <ul class="fa-ul">
+            <li><i class="fa fa-angle-double-right fa-li"></i> font-awesome.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> simple-line-icons.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> payment-webfont.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> weather-icons.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> elegant-icon.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> switchery.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> loaders.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> toastr.scss</li>
+          </ul>
+
+          <h2>components.css</h2>
+          <p>Contains the styles of plugins that we use on the template:</p>
+          <ul class="fa-ul">
+            <li><i class="fa fa-angle-double-right fa-li"></i> typeahead.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> tagsinput.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> select2.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> selectboxit.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> daterangepicker.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> minicolors.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> dropzone.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> fileinput.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> xeditable.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> wizard.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> summernote.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> jcrop.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> morris.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> easy-pie-chart.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> jstree.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> clndr.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> jqvmap.scss</li>
+          </ul>
+
+          <h2>wrapkit.css</h2>
+          <p>The core styles of template:</p>
+          <ul class="fa-ul">
+            <li><i class="fa fa-angle-double-right fa-li"></i> layout.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> header.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> sidebar.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> content.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> footer.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> setup-modal.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> utils.scss</li>
+          </ul>
+
+          <h2>pages.css</h2>
+          <p>Just a custom styles that used on wrapkit pages like profile, timeline, etc:</p>
+          <ul class="fa-ul">
+            <li><i class="fa fa-angle-double-right fa-li"></i> signin.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> locked.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> error.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> help.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> pricing.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> gallery.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> photoswipe.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> photoswipe-skin.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> timeline.scss</li>
+            <li><i class="fa fa-angle-double-right fa-li"></i> inbox.scss</li>
+          </ul>
+
+
+          <h1 class="page-header">Colors</h1>
+
+          <h2>Gray</h2>
+          <div class="color-box text-light" style="background-color:#16181B">darker</div>
+          <div class="color-box text-light" style="background-color:#434A54">dark</div>
+          <div class="color-box text-dark" style="background-color:#AAB2BD">gray</div>
+          <div class="color-box text-dark" style="background-color:#E6E9ED">light</div>
+          <div class="color-box text-dark bordered" style="background-color:#F5F7FA">lighter</div>
+
+          <h2>Brand</h2>
+          <div class="color-box bg-red">danger</div>
+          <div class="color-box bg-orange">warning</div>
+          <div class="color-box bg-teal">primary</div>
+          <div class="color-box bg-cyan">info</div>
+          <div class="color-box bg-blue">success</div>
+
+          <h2>Others</h2>
+          <div class="color-box bg-red">red</div>
+          <div class="color-box bg-orange">orange</div>
+          <div class="color-box bg-yellow">yellow</div>
+          <div class="color-box bg-green">green</div>
+          <div class="color-box bg-teal">teal</div>
+          <div class="color-box bg-cyan">cyan</div>
+          <div class="color-box bg-blue">blue</div>
+          <div class="color-box bg-violet">violet</div>
+
+          <h2>Gradient</h2>
+          <div class="color-box text-light bg-grd-red">red</div>
+          <div class="color-box text-light bg-grd-orange">orange</div>
+          <div class="color-box text-dark bg-grd-yellow">yellow</div>
+          <div class="color-box text-dark bg-grd-green">green</div>
+          <div class="color-box text-dark bg-grd-teal">teal</div>
+          <div class="color-box text-dark bg-grd-cyan">cyan</div>
+          <div class="color-box text-light bg-grd-blue">blue</div>
+          <div class="color-box text-light bg-grd-violet">violet</div>
+
+
+
+          <h1 class="page-header">Helper</h1>
+          <ul class="list-style-helper">
+            <li>
+              <div class="ci">
+                <div class="cn">.pull-left</div>
+                <div class="cd">float: left</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pull-right</div>
+                <div class="cd">float: right</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.clearfix</div>
+                <div class="cd">clear a float(s)</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.center-block</div>
+                <div class="cd">center a block element</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.show</div>
+                <div class="cd">display: block</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.hidden</div>
+                <div class="cd">display: none</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.invisible</div>
+                <div class="cd">visibility: hidden</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-resize</div>
+                <div class="cd">resize: none</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.help-inline</div>
+                <div class="cd">display: inline-block</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-decor</div>
+                <div class="cd">text-decoration: none</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-corner</div>
+                <div class="cd">border-radius: 0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-corner</div>
+                <div class="cd">border-radius: 0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-all</div>
+                <div class="cd">border-radius: 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-top</div>
+                <div class="cd">border radius top 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-right</div>
+                <div class="cd">border radius right 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-bottom</div>
+                <div class="cd">border radius bottom 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-left</div>
+                <div class="cd">border radius left 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-tl</div>
+                <div class="cd">border radius top left 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-tr</div>
+                <div class="cd">border radius top right 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-bl</div>
+                <div class="cd">border radius bottom left 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.corner-br</div>
+                <div class="cd">border radius bottom right 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.circle</div>
+                <div class="cd">border-radius: 50%</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.circle-top</div>
+                <div class="cd">border radius top 50%</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.circle-bottom</div>
+                <div class="cd">border radius bottom 50%</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-bg</div>
+                <div class="cd">background color transparent</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-red</div>
+                <div class="cd">background color red</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-orange</div>
+                <div class="cd">background color orange</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-yellow</div>
+                <div class="cd">background color yellow</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-green</div>
+                <div class="cd">background color green</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-teal</div>
+                <div class="cd">background color teal</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-cyan</div>
+                <div class="cd">background color cyan</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-blue</div>
+                <div class="cd">background color blue</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-violet</div>
+                <div class="cd">background color violet</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-white</div>
+                <div class="cd">background color white</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-red</div>
+                <div class="cd">background gradient red</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-orange</div>
+                <div class="cd">background gradient orange</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-yellow</div>
+                <div class="cd">background gradient yellow</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-green</div>
+                <div class="cd">background gradient green</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-teal</div>
+                <div class="cd">background gradient teal</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-cyan</div>
+                <div class="cd">background gradient cyan</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-blue</div>
+                <div class="cd">background gradient blue</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bg-grd-violet</div>
+                <div class="cd">background gradient violet</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-red</div>
+                <div class="cd">text color red</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-orange</div>
+                <div class="cd">text color orange</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-yellow</div>
+                <div class="cd">text color yellow</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-green</div>
+                <div class="cd">text color green</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-teal</div>
+                <div class="cd">text color teal</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-cyan</div>
+                <div class="cd">text color cyan</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-blue</div>
+                <div class="cd">text color blue</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-violet</div>
+                <div class="cd">text color violet</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-left</div>
+                <div class="cd">text-align: left</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-center</div>
+                <div class="cd">text-align: center</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.text-right</div>
+                <div class="cd">text-align: right</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.align-top</div>
+                <div class="cd">vertical-align: top</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.align-middle</div>
+                <div class="cd">vertical-align: middle</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.align-bottom</div>
+                <div class="cd">vertical-align: bottom</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-border</div>
+                <div class="cd">border: none</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered</div>
+                <div class="cd">border: 1px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-top</div>
+                <div class="cd">border-top: 1px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-right</div>
+                <div class="cd">border-right: 1px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-bottom</div>
+                <div class="cd">border-bottom: 1px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-left</div>
+                <div class="cd">border-left: 1px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-2x</div>
+                <div class="cd">border-width: 2px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-3x</div>
+                <div class="cd">border-width: 3px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.bordered-4x</div>
+                <div class="cd">border-width: 4px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-red</div>
+                <div class="cd">border color red</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-orange</div>
+                <div class="cd">border color orange</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-yellow</div>
+                <div class="cd">border color yellow</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-green</div>
+                <div class="cd">border color green</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-teal</div>
+                <div class="cd">border color teal</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-cyan</div>
+                <div class="cd">border color cyan</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-teal</div>
+                <div class="cd">border color teal</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-violet</div>
+                <div class="cd">border color violet</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.border-white</div>
+                <div class="cd">border color white</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-padding</div>
+                <div class="cd">padding: 0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-vpadding</div>
+                <div class="cd">vertical padding  0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-hpadding</div>
+                <div class="cd">horizontal padding  0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.p-1x</div>
+                <div class="cd">padding: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.p-2x</div>
+                <div class="cd">padding: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.p-3x</div>
+                <div class="cd">padding: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.p-4x</div>
+                <div class="cd">padding: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pt-1x</div>
+                <div class="cd">padding-top: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pt-2x</div>
+                <div class="cd">padding-top: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pt-3x</div>
+                <div class="cd">padding-top: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pt-4x</div>
+                <div class="cd">padding-top: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pr-1x</div>
+                <div class="cd">padding-right: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pr-2x</div>
+                <div class="cd">padding-right: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pr-3x</div>
+                <div class="cd">padding-right: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pr-4x</div>
+                <div class="cd">padding-right: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pb-1x</div>
+                <div class="cd">padding-bottom: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pb-2x</div>
+                <div class="cd">padding-bottom: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pb-3x</div>
+                <div class="cd">padding-bottom: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pb-4x</div>
+                <div class="cd">padding-bottom: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pl-1x</div>
+                <div class="cd">padding-left: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pl-2x</div>
+                <div class="cd">padding-left: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pl-3x</div>
+                <div class="cd">padding-left: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.pl-4x</div>
+                <div class="cd">padding-left: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-margin</div>
+                <div class="cd">margin: 0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-vmargin</div>
+                <div class="cd">vertical margin 0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.no-hmargin</div>
+                <div class="cd">horizontal margin 0</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.m-1x</div>
+                <div class="cd">margin: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.m-2x</div>
+                <div class="cd">margin: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.m-3x</div>
+                <div class="cd">margin: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.m-4x</div>
+                <div class="cd">margin: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mt-1x</div>
+                <div class="cd">margin-top: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mt-2x</div>
+                <div class="cd">margin-top: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mt-3x</div>
+                <div class="cd">margin-top: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mt-4x</div>
+                <div class="cd">margin-top: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mr-1x</div>
+                <div class="cd">margin-right: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mr-2x</div>
+                <div class="cd">margin-right: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mr-3x</div>
+                <div class="cd">margin-right: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mr-4x</div>
+                <div class="cd">margin-right: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mb-1x</div>
+                <div class="cd">margin-bottom: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mb-2x</div>
+                <div class="cd">margin-bottom: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mb-3x</div>
+                <div class="cd">margin-bottom: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.mb-4x</div>
+                <div class="cd">margin-bottom: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.ml-1x</div>
+                <div class="cd">margin-left: 6px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.ml-2x</div>
+                <div class="cd">margin-left: 12px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.ml-3x</div>
+                <div class="cd">margin-left: 18px</div>
+              </div>
+            </li><!-- /as cols -->
+            <li>
+              <div class="ci">
+                <div class="cn">.ml-4x</div>
+                <div class="cd">margin-left: 24px</div>
+              </div>
+            </li><!-- /as cols -->
+          </ul><!-- /.list-style-helper -->
+
+        </div><!-- /.content-body -->
+
+      </div><!-- /.content -->
+    </section><!-- /MAIN -->
+
+  </main>
+  <!-- /#MAIN -->
+
+
+  <!-- bower:js -->
+  <!-- VENDORS : jQuery & Bootstrap -->
+  <script src="../scripts/vendor.js"></script>
+  <!-- END VENDORS -->
+
+  <!-- DEPENDENCIES : Required plugins -->
+  <script src="../scripts/dependencies.js"></script>
+  <!-- END DEPENDENCIES -->
+  <!-- endbower -->
+
+  <!-- WRAPKIT -->
+  <script src="../scripts/wrapkit.js"></script>
+  <!-- END WRAPKIT -->
+
+  <!-- PLUGIN SETUPS: vendors & dependencies setups -->
+  <script src="../scripts/plugin-setups.js"></script>
+  <!-- END PLUGIN SETUPS -->
+
+  <!-- DOCS SETUPS -->
+  <script src="scripts/prism.js"></script>
+  <script src="scripts/setups.js"></script>
+  <!-- end DOCS SETUPS -->
+
+
+  <!-- Google Analytics: change UA-48454066-1 to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-48454066-1');ga('send','pageview');
+  </script>
+</body>
+
+</html>

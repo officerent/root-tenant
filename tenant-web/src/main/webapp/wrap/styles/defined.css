@@ -1,0 +1,45 @@
+h1 {letter-spacing:3px}
+h2 {letter-spacing:3px}
+h3 {letter-spacing:3px}
+h4 {letter-spacing:3px}
+h5 {letter-spacing:3px}
+h6 {letter-spacing:3px}
+p  {letter-spacing:2px}
+
+.soho-red{
+    width: 34px;
+    height: 48px;
+    text-align: center;
+    line-height: 24px;
+    background-color: rgba(237,85,101,.26);
+}
+.soho-gray{
+    width: 34px;
+    height: 48px;
+    text-align: center;
+    line-height: 24px;
+    background-color: lightgrey;
+}
+.soho-orange{
+    color: rgba(22,24,27,.87);
+    background-color: #FF9011;;
+    border-color: transparent
+}
+.bg-grd-orange {
+    background: linear-gradient(45deg, #ffce54 0, rgba(109, 207, 2, 0) 70%), linear-gradient(135deg, #FF9011 10%, rgba(6, 133, 224, 0) 80%), linear-gradient(225deg, #FF9011 10%, rgba(4, 166, 220, 0) 80%), linear-gradient(315deg, #FF9011 100%, rgba(18, 2, 237, 0) 70%) !important;
+}
+.bg-grd-white {
+    background: linear-gradient(45deg, #fdf7e8 0, rgba(109, 207, 2, 0) 70%), linear-gradient(135deg, #f9f9f9 10%, rgba(6, 133, 224, 0) 80%), linear-gradient(225deg, #e0ddd9 10%, rgba(4, 166, 220, 0) 80%), linear-gradient(315deg, #fbfbfb 100%, rgba(18, 2, 237, 0) 70%) !important;
+}
+.btn-soho-danger {
+    color: #ffffff;
+    background-color: #FF9011;
+    border-color: transparent;
+}
+.input-center {
+    text-align:center;
+    vertical-align:middle;
+}
+.display-none {
+    display: none;
+}

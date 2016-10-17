@@ -1,0 +1,69 @@
+<h2 class="page-header">Wrapkit Footer</h2>
+
+<h3>Usage</h3>
+<pre class="language-javascript line-numbers"><code>var myFooter = new WrapkitFooter( '#myFooter', options );</code></pre>
+
+<h3>Options</h3>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>rtlMode</td>
+        <td>boolean</td>
+        <td><span class="code">false</span></td>
+        <td>set the Footer direction to rtl/ltr.</td>
+      </tr>
+      <tr>
+        <td>skin</td>
+        <td>string</td>
+        <td><span class="code">default</span></td>
+        <td>
+          <p>set the Footer skin. Available skins:</p>
+          <p><code>default</code>, <code>dark</code>, <code>light</code>, <code>red</code>, <code>orange</code>, <code>yellow</code>, <code>green</code>, <code>teal</code>, <code>cyan</code>, <code>blue</code>, <code>violet</code>.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table><!-- /.table -->
+</div><!-- /.table-responsive -->
+<h4>setter</h4>
+<pre class="language-javascript line-numbers"><code>var opts = {
+  rtlMode: false,
+  skin: "default"
+};
+myFooter.option( opts );</code></pre>
+<h4>getter</h4>
+<pre class="language-javascript"><code>var options = myFooter.options;</code></pre>
+<h5>get individually</h5>
+<pre class="language-javascript"><code>var skin = myFooter.options.skin;</code></pre>
+
+<h3>Methods</h3>
+<h4><span class="code">rtl()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the footer direction
+  myFooter.rtl(true);
+});</code></pre>
+
+<h4><span class="code">setSkin()</span></h4>
+<pre class="language-javascript line-numbers"><code>document.querySelector("#myButton")
+  .addEventListener( "click", function(){
+  // set the footer skin
+  myFooter.setSkin('light');
+});</code></pre>
+
+
+<h3>Events</h3>
+<h4><span class="code">init</span></h4>
+<pre class="language-javascript"><code>myFooter.on( "init", function( myFooter ) { });</code></pre>
+<h4><span class="code">rtl</span></h4>
+<pre class="language-javascript"><code>myFooter.on( "rtl", function( myFooter ) { });</code></pre>
+<h4><span class="code">setSkin</span></h4>
+<pre class="language-javascript"><code>myFooter.on( "setSkin", function( myFooter, oldSkin, currentSkin ) { });</code></pre>

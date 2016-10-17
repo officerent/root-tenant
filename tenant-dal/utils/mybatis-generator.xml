@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry
+            location="utils/mysql-connector-java-5.1.26.jar"/>
+
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.200.22:3306/rebates?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="root" password="password">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.office.rebates.dal.dataobj"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.office.rebates.dal.dao"
+                         targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.office.rebates.dal.dao"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="rebates_user" domainObjectName="RebatesUser">
+        	<generatedKey column="user_id" sqlStatement="MySql" identity="true" />
+        </table>
+        
+
+        <table tableName="question_answer" domainObjectName="QuestionAnswer">
+            <generatedKey column="qa_id" sqlStatement="MySql" identity="true" />
+        </table>
+
+        <table tableName="sales_people" domainObjectName="SalesPeople">
+        	<generatedKey column="sales_id" sqlStatement="MySql" identity="true" />
+        </table>
+        
+        <table tableName="rebates_order" domainObjectName="RebatesOrder">
+			<generatedKey column="order_id" sqlStatement="MySql" identity="true" />       
+        </table>
+        
+        <table tableName="rebates_order_item" domainObjectName="RebatesOrderItem">
+			<generatedKey column="order_item_id" sqlStatement="MySql" identity="true" />       
+        </table>
+        
+        <table tableName="rebates_bonus" domainObjectName="RebatesBonus">
+			<generatedKey column="bonus_id" sqlStatement="MySql" identity="true" />       
+        </table>
+        
+        <table tableName="rebates_bonus_mock" domainObjectName="RebatesBonusMock">
+			<generatedKey column="bonus_mock_id" sqlStatement="MySql" identity="true" />       
+        </table>
+        
+        <table tableName="rebates_global_lock" domainObjectName="RebatesGlobalLock">
+        </table>
+        
+        <table tableName="rebates_article" domainObjectName="RebatesArticle">
+			<generatedKey column="article_id" sqlStatement="MySql" identity="true" />       
+        </table>
+        
+    </context>
+</generatorConfiguration>
