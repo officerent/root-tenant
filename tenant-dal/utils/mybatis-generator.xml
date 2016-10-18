@@ -17,58 +17,28 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.office.rebates.dal.dataobj"
+        <javaModelGenerator targetPackage="com.root.tenant.dal.dataobj"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.office.rebates.dal.dao"
+        <sqlMapGenerator targetPackage="com.root.tenant.dal.dao"
                          targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.office.rebates.dal.dao"
+                             targetPackage="com.root.tenant.dal.dao"
                              targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="rebates_user" domainObjectName="RebatesUser">
+        <table tableName="user" domainObjectName="User">
         	<generatedKey column="user_id" sqlStatement="MySql" identity="true" />
         </table>
         
 
-        <table tableName="question_answer" domainObjectName="QuestionAnswer">
-            <generatedKey column="qa_id" sqlStatement="MySql" identity="true" />
-        </table>
-
-        <table tableName="sales_people" domainObjectName="SalesPeople">
-        	<generatedKey column="sales_id" sqlStatement="MySql" identity="true" />
-        </table>
-        
-        <table tableName="rebates_order" domainObjectName="RebatesOrder">
-			<generatedKey column="order_id" sqlStatement="MySql" identity="true" />       
-        </table>
-        
-        <table tableName="rebates_order_item" domainObjectName="RebatesOrderItem">
-			<generatedKey column="order_item_id" sqlStatement="MySql" identity="true" />       
-        </table>
-        
-        <table tableName="rebates_bonus" domainObjectName="RebatesBonus">
-			<generatedKey column="bonus_id" sqlStatement="MySql" identity="true" />       
-        </table>
-        
-        <table tableName="rebates_bonus_mock" domainObjectName="RebatesBonusMock">
-			<generatedKey column="bonus_mock_id" sqlStatement="MySql" identity="true" />       
-        </table>
-        
-        <table tableName="rebates_global_lock" domainObjectName="RebatesGlobalLock">
-        </table>
-        
-        <table tableName="rebates_article" domainObjectName="RebatesArticle">
-			<generatedKey column="article_id" sqlStatement="MySql" identity="true" />       
-        </table>
         
     </context>
 </generatorConfiguration>
