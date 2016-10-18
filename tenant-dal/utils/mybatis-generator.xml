@@ -9,8 +9,8 @@
 
     <context id="MySQLTables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.200.22:3306/rebates?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;zeroDateTimeBehavior=convertToNull"
-                        userId="root" password="password">
+                        connectionURL="jdbc:mysql://123.206.54.48:3306/tenant?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="root" password="^&amp;*()!#%1928whox">
         </jdbcConnection>
 
         <javaTypeResolver>
