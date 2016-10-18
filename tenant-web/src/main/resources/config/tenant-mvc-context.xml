@@ -18,26 +18,26 @@
 	<annotation-driven />
 
 
-	<interceptors>
+<!-- 	<interceptors>
 		<interceptor>
 			<mapping path="/admin/**"/>
-			<beans:bean class="com.office.rebates.interceptor.LoginInterceptor" />
+			<beans:bean class="com.root.tenant.interceptor.LoginInterceptor" />
 		</interceptor>
 	</interceptors>
 
-	<resources mapping="/wrap/**" location="/wrap/" />
+	<resources mapping="/wrap/**" location="/wrap/" /> -->
 
 
 
-	<context:component-scan base-package="com.office.rebates">  
+	<context:component-scan base-package="com.root.tenant">  
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>  
 	
     <context:annotation-config></context:annotation-config>
 
-	<view-controller path="/" view-name="index" />
+<!-- 	<view-controller path="/" view-name="index" />
 	<view-controller path="/admin/" view-name="admin/index" />
-	<view-controller path="/admin" view-name="admin/index" />
+	<view-controller path="/admin" view-name="admin/index" /> -->
 
 	<!-- freemarker 相关 -->
 	<beans:bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">

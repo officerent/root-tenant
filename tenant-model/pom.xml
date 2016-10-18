@@ -7,7 +7,7 @@
         <groupId>com.root</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-	<groupId>com.tenant</groupId>
+	<groupId>com.root</groupId>
   	<artifactId>tenant-model</artifactId>
   	<modelVersion>4.0.0</modelVersion>
 </project>

@@ -62,7 +62,7 @@
 		<appender-ref ref="STDOUT" />
 	</logger>
 	<appender name="DRFOUT" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="/logs/office/rebates.log" />
+		<param name="File" value="/logs/tenant/tenant.log" />
 		<param name="Append" value="true" />
 		<param name="DatePattern" value="yyyy_MM_dd" />
 		<layout class="org.apache.log4j.PatternLayout">

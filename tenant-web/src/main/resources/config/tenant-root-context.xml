@@ -6,10 +6,10 @@
 	http://www.springframework.org/schema/context 
 		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <context:component-scan base-package="com.office.rebates" />
+    <context:component-scan base-package="com.root.tenant" />
     <context:annotation-config></context:annotation-config>
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
-	<import resource="classpath:config/rebates-beans-context.xml" />
+	<import resource="classpath:config/tenant-beans-context.xml" />
 	
 </beans>
