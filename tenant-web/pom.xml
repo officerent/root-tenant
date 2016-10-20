@@ -11,6 +11,10 @@
 	<artifactId>tenant-web</artifactId>
 	<packaging>war</packaging>
 
+	<!--<properties>
+		<lib.path>${project.parent.basedir}</lib.path>
+	</properties>-->
+
 	<dependencies>
 
 		<!-- local dependency -->
@@ -30,6 +34,20 @@
 	        <artifactId>tenant-dal</artifactId>
         	<version>1.0-SNAPSHOT</version>
 	    </dependency>
+		<dependency>
+			<groupId>jasper</groupId>
+			<artifactId>jasper</artifactId>
+			<version>1.0</version>
+			<systemPath>${lib.path}/jasper.jar</systemPath>
+			<scope>system</scope>
+		</dependency>
+		<dependency>
+			<groupId>tomcat-api</groupId>
+			<artifactId>tomcat-api</artifactId>
+			<version>1.0</version>
+			<systemPath>${lib.path}/tomcat-api.jar</systemPath>
+			<scope>system</scope>
+		</dependency>
 	    
 	</dependencies>
 
