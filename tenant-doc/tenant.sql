@@ -80,3 +80,15 @@ insert into meta_org_auth(name,create_time,creator) values('people',now(),'syste
 insert into meta_org_role(name,auth_list,create_time,creator) values('admin','resource,finance,people',now(),'system');
 insert into meta_org_role(name,auth_list,create_time,creator) values('user','resource',now(),'system');
 
+CREATE TABLE `meta_org_auth` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '组织角色原数据ID',
+  `name` varchar(100) COMMENT '权限名：resource,finance,people',
+  `create_time` datetime comment '创建时间',
+  `creator` varchar(50) COMMENT '创建者',
+  `update_time` datetime comment '最后一次更新时间',
+  `updator` varchar(50) COMMENT '更新者',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) AUTO_INCREMENT = 1000 ENGINE=InnoDB DEFAULT CHARSET=utf8  COMMENT='组织权限点元数据表';
+
+

@@ -28,7 +28,7 @@
 	<!-- ======================================================================== -->
 	<!--  data source -->
 	<!-- ======================================================================== -->
-	<bean id="rdstenantDataSource" class="org.apache.commons.dbcp.BasicDataSource" lazy-init="true">
+	<bean id="rdsTenantDataSource" class="org.apache.commons.dbcp.BasicDataSource" lazy-init="true">
 		<property name="url" value="#{apiConfig['tenant.ds.rds.url']}" />
 		<property name="driverClassName" value="#{apiConfig['tenant.ds.rds.driver']}" />
 		<property name="username" value="#{apiConfig['tenant.ds.rds.username']}" />

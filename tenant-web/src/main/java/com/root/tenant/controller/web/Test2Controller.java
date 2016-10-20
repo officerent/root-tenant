@@ -17,10 +17,10 @@ import java.util.List;
  */
 @Controller
 //@RequestMapping(RouteKey.WEB)
-public class TestController {
+public class Test2Controller {
 
 
-    private static Logger logger = LoggerFactory.getLogger(TestController.class);
+    private static Logger logger = LoggerFactory.getLogger(Test2Controller.class);
     /**
      * web端首页
      */
