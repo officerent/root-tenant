@@ -37,9 +37,9 @@
     <task:executor id="executor" pool-size="10"/> <task:scheduler id="scheduler" pool-size="10"/>
     <task:annotation-driven scheduler="scheduler" executor="executor" proxy-target-class="true"/>
     
-    <import resource="spring-context-shiro.xml"/>
-    
-    <import resource="spring-context-jedis.xml"/>
+    <!--<import resource="spring-context-shiro.xml"/>-->
+    <!---->
+    <!--<import resource="spring-context-jedis.xml"/>-->
     
     <import resource="spring-mvc.xml"/>
     
