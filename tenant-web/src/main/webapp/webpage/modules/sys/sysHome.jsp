@@ -14,10 +14,10 @@
 	<div class="wrapper wrapper-content">
    <div class="row  border-bottom white-bg dashboard-header">
         <div class="col-sm-12">
-            <blockquote class="text-info" style="font-size:14px">wusyx是一款基于代码生成器的智能快速开发平台，引领新开发模式(智能开发\在线开发\插件开发)， 可以帮助解决Java项目80%的重复工作，让开发更多关注业务逻辑。既能快速提高开发效率，帮助公司节省人力成本，同时又不失灵活性。
-    wusyx快速开发宗旨是：简单功能由代码生成器生成使用; 复杂业务采用表单自定义，业务流程使用工作流来实现、扩展出任务接口，供开发编写业务逻辑。 实现了流程任务节点和任务接口的灵活配置，既保证了公司流程的保密性，又减少了开发人员的工作量
+            <blockquote class="text-info" style="font-size:14px">一款基于代码生成器的智能快速开发平台，引领新开发模式(智能开发\在线开发\插件开发)， 可以帮助解决Java项目80%的重复工作，让开发更多关注业务逻辑。既能快速提高开发效率，帮助公司节省人力成本，同时又不失灵活性。
+    快速开发宗旨是：简单功能由代码生成器生成使用; 复杂业务采用表单自定义，业务流程使用工作流来实现、扩展出任务接口，供开发编写业务逻辑。 实现了流程任务节点和任务接口的灵活配置，既保证了公司流程的保密性，又减少了开发人员的工作量
     			<br/>
-               <br>wusyx采用了目前极为流行的扁平化响应式的设计风格，可以完美的兼容电脑，pad，手机等多个平台。前端UI采用了<a target="_blank" href="http://wrapbootstrap.com/preview/WB0R5L90S">INSPINIA</a>(点击访问）为原型开发，wusyx v2.0发布时作者将bootstrap升级到了最新的3.3.4。
+               <br>采用了目前极为流行的扁平化响应式的设计风格，可以完美的兼容电脑，pad，手机等多个平台。前端UI采用了<a target="_blank" href="http://wrapbootstrap.com/preview/WB0R5L90S">INSPINIA</a>(点击访问）为原型开发,v2.0发布时作者将bootstrap升级到了最新的3.3.4。
                 <br>…………
             </blockquote>
 
@@ -31,7 +31,7 @@
 
                 <div class="ibox float-e-margins">
                      <div class="ibox-title">
-                        <h5>wusyx 技术特点</h5>
+                        <h5>技术特点</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="ibox-content">
-                        <p> wusyx开发平台采用 SpringMVC + MyBatis + BootStrap + Apache Shiro + Ehcache 开发组件 的基础架构,采用面向声明的开发模式， 基于泛型编写极少代码即可实现复杂的数据展示、数据编辑、
+                        <p> 开发平台采用 SpringMVC + MyBatis + BootStrap + Apache Shiro + Ehcache 开发组件 的基础架构,采用面向声明的开发模式， 基于泛型编写极少代码即可实现复杂的数据展示、数据编辑、
 表单处理等功能，再配合代码生成器的使用,将J2EE的开发效率提高5倍以上，可以将代码减少50%以上。
 
                         <ol>
@@ -108,173 +108,47 @@
                             	<div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v2.5">v2.5</a><code class="pull-right">2016.10.8更新</code>
+                                                <a data-toggle="collapse" data-parent="#version" href="#v2.5"></a><code class="pull-right"></code>
                                             </h5>
                                     </div>
                                     <div id="v2.5" class="panel-collapse collapse in">
                                         <div class="panel-body">
                                             <ol>
-                                            	<li>升级代码生成器，生成的代码增加表单校验功能。</li>
-                                            	<li>修复代码生成器v2.3版本的bug，修复乱码功能。</li>
-                                            	<li>优化代码生成器体验，增加错误校验等。</li>
-                                                <li>去除dialog的竖向滚动条</li>
-                                                <li>修复升级layer2.3的bug。</li>
-                                            	<li>升级layim1.0到layim2.0。</li>
-                                            	<li>支持自定义签名。</li>
-                                                <li>支持表情，文件，群聊，群聊聊天记录。</li>
-                                                <li>支持自定义聊天群组，添加移除群组人员。</li>
-                                                <li>支持离线消息。</li>
-                                                <li>....</li>
-                                                <li>layim1.0是免费插件，layim2.0是商业授权，你仍可选择免费使用layim1.0，如果需要使用layim2.0，你需要购买一个授权，价格不贵，希望大家尊重知识版权，给开源作者一点点鼓励，才能持续给大家提供优秀的开源软件,<a href="http://layim.layui.com/?from=layer" target="_blank">layIM官网</a>。</li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
                             
-                            	<div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v2.4">v2.4</a><code class="pull-right">2016.06.27更新</code>
-                                            </h5>
-                                    </div>
-                                    <div id="v2.4" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ol>
-                                            	<li>升级layer到2.4版本。</li>
-                                                <li>解决layer弹出窗无法自适应手机的问题，jeeplus以完美支持移动端。</li>
-                                                <li>修复layer弹窗弹出时窗口闪动的bug。</li>
-                                                <li>修复分页bug。</li>
-                                                <li>....</li>
-                                                <li>封装echarts标签，提供快捷开发报表的功能。</li>
-                                                <li>感谢大家的持续关注，如果你有更好的建议，请直接联系我。</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            	<div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v2.3">v2.3</a><code class="pull-right">2016.05.17更新</code>
-                                            </h5>
-                                    </div>
-                                    <div id="v2.3" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ol>
-                                            	<li>修复初次登录，菜单加载慢的问题,加载速度从10秒优化到2秒。</li>
-                                                <li>修复list导入Excel文档为空的bug。</li>
-                                                <li>修复360浏览器（7.1版本）提交表单失败的bug。</li>
-                                                <li>修复短信发送bug。</li>
-                                                <li>修复发送站内信时，无法添加图片的bug。</li>
-                                                <li>增加我的日程功能。</li>
-                                                <li>修复代码生成器生成的树结构，删除子节点时，会误删除父节点的bug。</li>
-                                                <li>删除百度统计的代码</li>
-                                                <li>修复oracle数据库脚本</li>
-                                                <li>优化登录页的显示风格</li>
-                                                <li>增加我的日程功能</li>
-                                                <li>增加代码生成器支持生成富文本编辑框的功能</li>
-                                                <li>增加代码生成器支持自定义grid选择框的功能。</li>
-                                                <li>....</li>
-                                                <li>下一个版本，主要关注功能是报表和activity工作流，至于数据权限，我暂时还没想到好的解决方案。</li>
-                                                <li>感谢大家的持续关注，如果你有更好的建议，请直接联系我。</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            		<div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v2.2">v2.2Beta版</a><code class="pull-right">2016.03.13更新</code>
-                                            </h5>
-                                    </div>
-                                    <div id="v2.2" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ol>
-                                            	<li>这是目前为止最重要的一次升级。</li>
-                                                <li>新增功能：cpu，内存，jvm性能检测预警工具，短信群发功能，邮件群发功能，ace主题切换功能，表单构建器功能等功能。</li>
-                                                <li>修正了大量2.1beta版本的bug，以及页面性能优化，具体参照网站的更新报告</li>
-                                                <li>升级代码生成器功能，移除（可插入，可编辑）2个配置项，新增(表单）配置项，使代码生成器更加简单易懂，提高了代码生成器的实用性。</li>
-                                                <li>....</li>
-                                                <li>富文本编辑器，自定义java对象功能，表格的行权限和列权限，上下菜单风格，echarts图表生成器等功能预计在2.3版本推出。</li>
-                                                <li>感谢大家的持续关注，如果你有更好的建议，请直接联系我。</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            	<div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v2.0">v2.1Beta版</a><code class="pull-right">2016.02.25更新</code>
-                                            </h5>
-                                    </div>
-                                    <div id="v2.0" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ol>
-                                            	<li>这个版本是一个bug修复版本</li>
-                                                <li>修正zTree显示bug</li>
-                                                <li>移除google的cdn依赖，解决加载慢的问题</li>
-                                                <li>修正代码生成器拖拽bug</li>
-                                                <li>修正站内信bug</li>
-                                                <li>....</li>
-                                                <li>仪表盘，定时任务，自定义表单，邮箱短信等等新功能，因为多个环境对应以及代码校验完善的原因将在2.2推出，所有正式用户均可免费升级。</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v2.0">v2.0</a><code class="pull-right">2016.01.15更新</code>
-                                            </h5>
-                                    </div>
-                                    <div id="v2.0" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ol>
-                                                <li>修复IE不兼容，首页出现滚动条</li>
-                                                <li>修复validate插件bug</li>
-                                                <li>提供基于WebSocket的即时聊天系统</li>
-                                                <li>增加注册忘记密码功能</li>
-                                                <li>优化了主题的显示效果</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
+
                                    <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v1.0">v1.9</a><code class="pull-right"></code>
+                                                <a data-toggle="collapse" data-parent="#version" href="#v1.0"></a><code class="pull-right"></code>
                                             </h5>
                                     </div>
                                 </div>
                                    <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v1.0">v1.8</a><code class="pull-right"></code>
+                                                <a data-toggle="collapse" data-parent="#version" href="#v1.0"></a><code class="pull-right"></code>
                                             </h5>
                                     </div>
                                 </div>
                            		<div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="">********</a><code class="pull-right"></code>
+                                                <a data-toggle="collapse" data-parent="#version" href=""></a><code class="pull-right"></code>
                                             </h5>
                                     </div>
                                 </div>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v1.1">v1.1</a><code class="pull-right"></code>
+                                                <a data-toggle="collapse" data-parent="#version" href="#v1.1"></a><code class="pull-right"></code>
                                             </h5>
                                     </div>
                                 </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#version" href="#v1.0">v1.0</a><code class="pull-right"></code>
-                                            </h5>
-                                    </div>
-                                </div>
-                               
+
                 </div>
             </div>
             </div>
@@ -286,7 +160,7 @@
                         <h5>商业授权 </h5>
                     </div>
                     <div class="ibox-content">
-                        <p>wusyx是一款收费开源的快速开发平台，购买后您将获得以下内容</p>
+                        <p>一款收费开源的快速开发平台，购买后您将获得以下内容</p>
                         <ol>
                             <li>源码(带注释)；</li>
                             <li>代码生成器；</li>

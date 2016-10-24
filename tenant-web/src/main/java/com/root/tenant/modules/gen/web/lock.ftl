@@ -7,7 +7,7 @@
 <body>
 <div class="demo">
     <p><span>您的license无效。</span></p>
-    <p>非授权版本无法使用代码生成器功能，支持正版，您将获得最新源码、永久的技术支持以及免费更新，可以加入QQ官方技术群，授权官网:http://www.wusyx.com</p>
+    <p>非授权版本无法使用代码生成器功能，支持正版，您将获得最新源码、永久的技术支持以及免费更新，可以加入QQ官方技术群，授权官网:http://www.rootcloud.com</p>
     <br><br><br><br>
     <p style="display:none"><input type="text" name="licence" style="width:400px;"/> <input type="button" value="提交"/></p>
 </div>

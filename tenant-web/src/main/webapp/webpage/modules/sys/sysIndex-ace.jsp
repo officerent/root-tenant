@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-    <title>wusyx快速开发框架</title>
+    <title>rootcloud快速开发框架</title>
 
 	<%@ include file="/webpage/include/acehead.jsp"%>
 	<script src="${ctxStatic}/common/inspinia-ace.js?v=3.2.0"></script>
@@ -42,7 +42,7 @@
 					<a href="#" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							wusyx快速开发框架
+							rootcloud快速开发框架
 						</small>
 					</a>
 
@@ -378,7 +378,7 @@
 					<!-- #section:basics/footer -->
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">wusyx</span>
+							<span class="blue bolder">rootcloud</span>
 							 &copy; 2015-2020
 						</span>
 

@@ -437,7 +437,7 @@
 														<input name="ck1" type="checkbox" class="required ace" />
 														<span class="lbl">
 															我接受
-															<a href="#">《wusyx用户注册协议》</a>
+															<a href="#">《rootcloud用户注册协议》</a>
 														</span>
 														<label id="ck1-error" class="error" for="ck1" style="display: none;">必须接受用户协议</label>
 													</label>

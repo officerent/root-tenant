@@ -8,13 +8,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-    <title>wusyx</title>
+    <title>rootcloud</title>
 
 	<%@ include file="/webpage/include/head.jsp"%>
 	<script src="${ctxStatic}/common/inspinia.js?v=3.2.0"></script>
 	<script src="${ctxStatic}/common/contabs.js"></script> 
-    <meta name="keywords" content="wusyx快速开发平台">
-    <meta name="description" content="wusyx，采用spring mvc+mybatis+shiro+bootstrap，集成代码生成器的快速开发平台">
+    <meta name="keywords" content="rootcloud快速开发平台">
+    <meta name="description" content="rootcloud，采用spring mvc+mybatis+shiro+bootstrap，集成代码生成器的快速开发平台">
     <script type="text/javascript">
 	$(document).ready(function() {
 		 if('${fns:getDictLabel(cookie.theme.value,'theme','默认主题')}' == '天蓝主题'){
