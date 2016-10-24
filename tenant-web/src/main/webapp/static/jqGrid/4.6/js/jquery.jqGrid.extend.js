@@ -1,6 +1,6 @@
 /**
  * jqGrid 封装类
- * @author jeeplus@163.COM
+ * @author @163.COM
  * @version 2014-8-22
  */
 var DataGrid = function(options){

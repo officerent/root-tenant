@@ -262,7 +262,7 @@
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${ctx}/home" frameborder="0" data-id="${ctx}/home" seamless></iframe>
             </div>
             <div class="footer">
-                <div class="pull-left"><a href="http://www.jeeplus.org">http://www.jeeplus.org</a> &copy; 2015-2025</div>
+                <div class="pull-left"><a href="http://www.rootcloud.com">http://www.rootcloud.com</a> &copy; 2016-2025</div>
             </div>
         </div>
         <!--右侧部分结束-->

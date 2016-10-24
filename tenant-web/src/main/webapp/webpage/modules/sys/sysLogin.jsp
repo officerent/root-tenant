@@ -473,7 +473,7 @@
 									</div><!-- /.widget-body -->
 								</div><!-- /.signup-box -->
 							</div><!-- /.position-relative -->
-							<div class="center"><h4 id="id-company-text"><font color="#A90E0E">&copy; www.jeeplus.org</font></h4></div>
+							<div class="center"><h4 id="id-company-text"><font color="#A90E0E">&copy; www.rootcloud.com</font></h4></div>
 				
 						</div>
 					</div><!-- /.col -->
