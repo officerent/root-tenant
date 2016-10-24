@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,12 +15,16 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
+import com.mysql.jdbc.StringUtils;
 import com.root.tenant.dal.dao.UserMapper;
 import com.root.tenant.dal.dataobj.User;
+import com.root.tenant.dal.dataobj.UserExample;
 import com.root.tenant.model.common.Constants;
+import com.root.tenant.model.common.Messages;
 import com.root.tenant.model.common.TenantException;
 import com.root.tenant.service.UserService;
 
@@ -39,7 +44,12 @@ public class UserServiceImpl implements UserService{
 		Date now=new Date();
 		user.setCreateTime(now);
 		user.setUpdateTime(now);
-		userMapper.insert(user);
+		try{
+			userMapper.insert(user);
+		}catch(DuplicateKeyException e){
+			logger.error("user:"+JSON.toJSONString(user)+" already exists");
+			throw new TenantException(Messages.USER_ALREADY_EXIST_CODE,Messages.USER_ALREADY_EXIST_MSG);
+		}
 		logger.info("new user was inserted:"+JSON.toJSONString(user));
 		
 	}
@@ -105,6 +115,59 @@ public class UserServiceImpl implements UserService{
          
         
 		return bufferedImage;
+	}
+
+	@Override
+	public void registerUser(String userName, String email, String password, String verificationCode,
+			HttpServletRequest request) throws TenantException {
+		//验证验证码是否正确
+		String savedVerificationCode=String.valueOf(request.getSession().getAttribute("verification_code"));
+		if(!savedVerificationCode.equals(verificationCode)){
+			logger.error("verification:"+verificationCode+" not match the one saved in session:"+savedVerificationCode);
+			throw new TenantException(Messages.VERIFICATION_CODE_NOT_MATCH_CODE,Messages.VERIFICATION_CODE_NOT_MATCH_MSG);
+		}
+		
+		//查看用户名是否为空或者已经存在
+		if(StringUtils.isNullOrEmpty(userName)){
+			logger.error("user name can't be empty");
+			throw new TenantException(Messages.USER_NAME_EMPTY_CODE,Messages.USER_NAME_EMPTY_MSG);
+		}
+		UserExample userExample=new UserExample();
+		userExample.createCriteria().andNameEqualTo(userName);
+		List<User> users=userMapper.selectByExample(userExample);
+		if(users!=null&&!users.isEmpty()){
+			logger.error("user name duplicate");
+			throw new TenantException(Messages.USER_NAME_DUPLICATE_CODE,Messages.USER_NAME_DUPLICATE_MSG);
+		}
+		
+		//查看用户邮箱是否为空或者已经存在
+		if(StringUtils.isNullOrEmpty(email)){
+			logger.error("user email can't be empty");
+			throw new TenantException(Messages.USER_EMAIL_EMPTY_CODE,Messages.USER_EMAIL_EMPTY_MSG);
+		}
+		userExample.clear();
+		userExample.createCriteria().andEmailEqualTo(email);
+		users=userMapper.selectByExample(userExample);
+		if(users!=null&&!users.isEmpty()){
+			logger.error("user email duplicate");
+			throw new TenantException(Messages.USER_EMAIL_DUPLICATE_CODE,Messages.USER_EMAIL_DUPLICATE_MSG);
+		}
+		
+		//
+		Date now=new Date();
+		User user=new User();
+		user.setCreateTime(now);
+		user.setCreator(userName);
+		user.setEmail(email);
+		user.setName(userName);
+		user.setPassword(password);
+		user.setStatus(Constants.USER_STATUS_NORMAL);
+		
+		//将user保存在缓存，并且发送确认邮件
+		
+		//暂时缺少邮件确认流程，所以直接插入user
+		addUser(user);
+
 	} 
 	
 	
