@@ -16,7 +16,7 @@ import java.util.List;
  * .
  */
 @Controller
-//@RequestMapping(RouteKey.WEB)
+//@RequestMapping(RouteKey.WEB) 
 public class Test2Controller {
 
 
